@@ -33,88 +33,154 @@
             background-color: rgb(166, 235, 212);
         }
 
+
+        .container {
+            display: flex;
+
+        }
+ /*general settings */       
+        .box-1 {
+            flex: 1;
+            height: 700px;
+        }
+ /*image */       
+        .box-1_image {
+            width: 100%;
+            height: 100%;
+            background-image: url("https://cdn2.hubspot.net/hubfs/3542650/joseph-fraioli-jafbox-sound-interview-blog-1.jpg");
+            background-size: cover;
+            
+        }
+ /*texts */       
+        .Sound-Designer {
+            width: auto;
+            height: auto;
+            text-align: center;
+
+        }
+
+        .box-2 {
+            flex: 1;
+            height: 700px;
+        }
+        
+        .box-2_image {
+            width: 100%;
+            height: 100%;
+            background-image: url("https://ggarces.weebly.com/uploads/1/5/1/9/151930746/the-photo-for-website_orig.jpg");
+            background-size: cover;
+        }  
+
+        .Technical-Sound-Designer{
+            width: auto;
+            height: auto;
+            text-align: center;           
+
+        }
+
+        .box-3 {
+            flex: 1;
+            height: 700px;
+        }
+
+        .box-3_image {
+            width: 100%;
+            height: 100%;
+            background-image: url("https://online.berklee.edu/takenote/wp-content/uploads/2021/08/music-composition-take-note.jpg");
+            background-size: cover;
+        }
+
+        .Composer {
+            width: auto;
+            height: auto;
+            text-align: center;
+        }        
+    
+        .box-1, .box-2, .box-3 {
+            cursor: pointer;
+        }
+
+ /*hover transitions and brightness settings  */       
+
+        .box-1_image, .box-2_image,.box-3_image {
+            transition: 0.3s;   
+        }
+        .box-1_image:hover, .box-2_image:hover, .box-3_image:hover {
+            filter: brightness(70%);
+        }
     </style>
+    
 </head>
 <body>
+
+
+
+
     <div class="profile-card">
         <h2>Giancarlo Garces</h2>
         <p>Freelance Sound Designer, Technical Audio Designer, Music Composer</p>
         <p>Boston, MA</p>
-        <a href="AboutMe.html" float: right>About me</a> <a href="Portfolio.html" float: right>Portfolio</a>
+    
     </div>
 
 
-    <br>
+    <div class="container">
+        <div class="box-1">
+            <div class="box-1_image">
+            </div>
+            <div class="Sound-Designer">Credits</div>
+        </div>
 
-     <div class= "image-grid">
-        <img src=https://cdn2.hubspot.net/hubfs/3542650/joseph-fraioli-jafbox-sound-interview-blog-1.jpg alt="SoundDesign" width="500px">
-        <br>
-        <img src=https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147511893/images/6345cc-01a0-00d-703a-e66e5e02b54_Game_development_course_3.webp alt="Tech sound design" width= "500px">
-        <br>
-        <img src=https://online.berklee.edu/takenote/wp-content/uploads/2021/08/music-composition-take-note.jpg alt="Composer" width="500px">
-        <br>
+
+        <div class="box-2">
+            <div class="box-2_image"></div>
+            <div class="Technical-Sound-Designer">About Me</div>
+        </div>
+        
+        <div class="box-3">
+            <div class="box-3_image"></div>
+            <div class="Composer">Current Highlight Project</div>
+        </div>
     </div>
-    
 
 
+<script>
+document.querySelector(".box-1").onclick = function () {
+    window.location.href = "Portfolio.html";
+};
 
-    <br>  
-    <h1>Home</h1>     
-    <li><strong>Sound Designer</strong> </li>
-    As a Sound Designer, the creative aspect of the art itself derives to certain skills such as
-     <ul>
-        <li>Enhanced the audio experience by designing and implementing immersive
-    soundscapes for various media projects.</li>
-        <li>Collaborated with directors and producers to create custom audio assets that
-    aligned with project visions.</li>
-        <li>Optimized audio quality by skillfully mixing and mastering soundtracks for
-    films and video games.</li>
-    </ul>
+document.querySelector(".box-2").onclick = function () {
+    window.location.href = "AboutMe.html";
+};
 
-    <br> 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+document.querySelector(".box-3").onclick = function () {
+    window.location.href = "CurrentHighlight.html";
+};
 
+box1.onmouseover = function () {
+    box1.style.filter = "brightness(70%)";
+};
 
+box1.onmouseout = function () {
+    box1.style.filter = "brightness(100%)";
+};
 
-    <li><strong>Technical Audio Designer</strong> </li>
-    As a Technical Audio Designer, the ideas of the artist needs to come to life and exectuing that in the software takes skills like
-    <ul>
-        <li>Edited and mixed audio tracks to enhance overall sound quality.</li>
-        <li>Collaborated with team members to troubleshoot technical issues and enhance system functionality.</li>
-        <li>Designed soundscapes for various multimedia projects, enhancing overall auditory experiences.</li>
-    </ul>
+box2.onmouseover = function () {
+    box2.style.filter = "brightness(70%)";
+};
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+box2.onmouseout = function () {
+    box2.style.filter = "brightness(100%)";
+};
 
+box3.onmouseover = function () {
+    box3.style.filter = "brightness(70%)";
+};
 
-    <li><strong>Music Composer</strong> </li>
-    As a Music Composer for either Film or Interactive media I apply to support the narative of the story by doing the following
-    <ul>
-        <li>Composed original scores for diverse media projects, enhancing storytelling through music.</li>
-        <li>Collaborated with directors to align musical themes with project visions.</li>
-        <li>Utilized digital audio workstations to edit and mix compositions efficiently.</li>
-    </ul>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    This is currently I label myself as for now, there many things I can do in the future related to these fields.
-    <br>
-    So as the journey continues so will my experience.
-
-    
+box3.onmouseout = function () {
+    box3.style.filter = "brightness(100%)";
+};
+</script>
 
 
 </body>
